@@ -1,0 +1,11 @@
+@import "../../styles/var.module";
+
+.buttonsContainer{
+    display: flex;
+}
+
+.next{
+    background-color: $marine-blue;
+    border: none;
+    color: $white;
+}

@@ -1,6 +1,27 @@
+@import "../styles/var.module";
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
 .indicatorsContainer{
+    height: 15vh;
     display: flex;
     justify-content: center;
-    margin-top: 4rem;
+    align-items: center;
     gap: 1.5rem;
+}
+
+.cardContainer{
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonsContainer{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

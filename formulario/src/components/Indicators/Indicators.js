@@ -4,16 +4,18 @@ import { useState } from "react";
 //
 import styles from "./indicators.module.scss";
 
-function Indicators() {
- 
-    const [pages, setPages] = useState(['1', '2', '3', '4'])
+function Indicators({ info, setInfo }) {
 
-    return (<>
-        {
-            pages?.map(elemento => <button className={styles.button} key={elemento}> {elemento} </button>)
+    const [pages, setPages] = useState([1, 2, 3, 4])
+    const {page} = info;
 
-        }
-    </>)
+    return (
+        <>
+            {
+                pages?.map(elemento => <button className={elemento === page ? styles.buttonSelected : styles.button} key={elemento}> {elemento} </button>)
+            }
+        </>
+    )
 }
 
-export default Indicators
+export default Indicators;
