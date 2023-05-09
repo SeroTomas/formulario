@@ -1,0 +1,35 @@
+@import "../../../../styles/var.module";
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+
+    .labelError {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3rem;
+        font-weight: 500;
+
+        label {
+            color: $marine-blue;
+        }
+
+        p {
+            color: $strawberry-red;
+        }
+    }
+
+    input {
+        padding: 1rem;
+        border-radius: 5px;
+        border: solid 1px $light-gray;
+
+        &::placeholder {
+            padding-left: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: $cool-gray;
+        }
+    }
+}
