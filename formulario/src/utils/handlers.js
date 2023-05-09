@@ -1,4 +1,4 @@
-const handleTypeError = (name, value) => {
+export const handleTypeError = (name, value) => {
     
     const option = {
         name: () => {
@@ -18,4 +18,11 @@ const handleTypeError = (name, value) => {
     return option[name]()
 }
 
-export default handleTypeError;
+export const handlePlaseHolder = (name) => {
+    const options = {
+        name: "e.g Stephen King",
+        email: "e.g stephenking@lorem.com",
+        phone: "e.g +1 234 567 890"
+    }
+    return options[name]
+}

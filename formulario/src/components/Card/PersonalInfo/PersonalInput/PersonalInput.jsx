@@ -1,8 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import handlePlaseHolder from "@/utils/handlePlaseHolder";
-import handleTypeError from "@/utils/handleTypeError";
+import { handleTypeError, handlePlaseHolder } from "@/utils/handlers";
 
 function PersonalInput({ label, type, name }) {
 
@@ -11,11 +10,7 @@ function PersonalInput({ label, type, name }) {
         setInput(value);
         setError(handleTypeError(name, value))
     };
-
-    const handleError = (value) => {
-        
-    }
-
+    
     const [plaseHolder] = useState(handlePlaseHolder(name));
     const [input, setInput] = useState('');
     const [error, setError] = useState(null);

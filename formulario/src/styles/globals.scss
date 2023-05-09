@@ -1,4 +1,4 @@
-
+@import "../styles/var.module";
 /* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 /* End Fonts */
@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  background-color: lightgray;
+  background-color: $magnolia;
   background-image: url("../../public/bg-sidebar-mobile.svg");
   background-repeat: no-repeat;
 }
