@@ -17,5 +17,16 @@ body {
   background-color: $magnolia;
   background-image: url("../../public/bg-sidebar-mobile.svg");
   background-repeat: no-repeat;
-  font-family: 'Ubuntu', sans-serif;;
+  font-family: 'Ubuntu', sans-serif;
+  ;
+}
+
+.pText {
+  font-size: 1.6rem;
+  color: $cool-gray;
+}
+
+.h2Title {
+  font-size: 2.4rem;
+  color: $marine-blue;
 }
