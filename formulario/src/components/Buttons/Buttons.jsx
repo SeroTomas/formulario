@@ -42,13 +42,7 @@ function Buttons() {
             return false
         } else return true
     }
-    console.log(errors);
-    console.log(inputs);
-    console.log("error");
-    console.log(anyError());
-    console.log("input");
-    console.log(anyInput());
-
+    
     return (
         <>
             <div className={style.buttonsContainer}>
