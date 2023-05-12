@@ -2,7 +2,9 @@ import React from 'react'
 
 function PlanSelector() {
   return (
-    <div>PlanSelector</div>
+    <button>
+        
+    </button>
   )
 }
 

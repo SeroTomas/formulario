@@ -3,7 +3,7 @@ import style from "./card.module.scss";
 //components and hooks
 import PersonalInfo from "./PersonalInfo/PersonalInfo";
 import SelectYourPlan from "./SelectYourPlan/SelectYourPlan";
-import ContextProvider, {AppContext} from "../AppContext";
+import {AppContext} from "../AppContext";
 import { useContext } from "react";
 
 function Card() {

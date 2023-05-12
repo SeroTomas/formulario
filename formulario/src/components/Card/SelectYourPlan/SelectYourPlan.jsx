@@ -1,5 +1,6 @@
 import React from 'react'
 import PlanSelector from './PlanSelector/PlanSelector'
+import Switch from '@mui/material/Switch';
 
 function SelectYourPlan() {
     return (
@@ -15,7 +16,9 @@ function SelectYourPlan() {
                 <PlanSelector />
             </div>
             <div>
-                
+                <p></p>
+                <Switch/>
+                <p></p>
             </div>
         </div>
 
