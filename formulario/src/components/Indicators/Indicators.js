@@ -1,13 +1,13 @@
 'use client'
-//hooks
-import { useState } from "react";
-//
+//style
 import styles from "./indicators.module.scss";
+//components and hooks
+import { useContext } from "react";
+import { AppContext } from "../AppContext";
+function Indicators() {
 
-function Indicators({ info, setInfo }) {
-
-    const [pages, setPages] = useState([1, 2, 3, 4])
-    const {page} = info;
+    const pages = [1, 2, 3, 4];
+    const { page } = info;
 
     return (
         <>
