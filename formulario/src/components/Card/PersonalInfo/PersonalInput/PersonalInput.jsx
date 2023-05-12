@@ -1,20 +1,33 @@
 'use client'
-
+// style
 import style from "./personalInput.module.scss";
-import { useState } from "react";
+//components and hooks
+import { useState, useEffect } from "react";
 import { handleTypeError, handlePlaseHolder } from "@/utils/handlers";
+import { AppContext } from "@/components/AppContext";
+import { useContext } from "react";
 
-function PersonalInput({ label, type, name }) {
+function PersonalInput({ label, type, name}) {
 
     const handleChange = (event) => {
         const value = event.target.value;
-        setInput(value);
-        setError(handleTypeError(name, value))
+        const errorValue = handleTypeError(name, value)
+        setInfo({
+            ...info,
+            inputs:{
+                ...inputs,
+                [name]:value
+            },
+            errors:{
+                ...errors,
+                [name]:errorValue
+            }
+        });
     };
 
+    const {info, setInfo} = useContext(AppContext);
+    const {inputs, errors} = info;
     const [plaseHolder] = useState(handlePlaseHolder(name));
-    const [input, setInput] = useState('');
-    const [error, setError] = useState('');
 
     return (
         <>
@@ -22,10 +35,10 @@ function PersonalInput({ label, type, name }) {
                 <div className={style.labelError}>
                     <label>{label}</label>
                     {
-                        error ? <p>{error}</p> : null
+                        errors[name] ? <p>{errors[name]}</p> : null
                     }
                 </div>
-                <input type={type} name={name} placeholder={plaseHolder} onChange={handleChange} value={input} />
+                <input type={type} name={name} placeholder={plaseHolder} onChange={handleChange} value={inputs[name]} />
             </div>
         </>
     )

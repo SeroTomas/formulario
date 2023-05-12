@@ -8,8 +8,16 @@ function ContextProvider({ children }) {
 
     const [info, setInfo] = useState({
         page: 1,
-        inputs: {},
-        errors: {}
+        inputs: {
+            name:'',
+            email:'',
+            phone:''
+        },
+        errors: {
+            name:'',
+            email:'',
+            phone:''
+        }
     })
 
     return (

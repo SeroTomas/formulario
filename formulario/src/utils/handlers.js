@@ -4,16 +4,20 @@ export const handleTypeError = (name, value) => {
         name: () => {
             if (!value) {return "This field is required"}
             if (value.length <= 6) {return "This require six characters min"}
+            return ''
         },
         email: () => {
             const regExp = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
             if (!regExp.test(value)) {
                 return "This field is required"
             }
+            return ''
         },
         phone: () => {
             if (!value) { return "This field is required"}
+            return ''
         }
+
     }
     return option[name]()
 }
