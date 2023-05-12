@@ -14,7 +14,7 @@ function PersonalInput({ label, type, name }) {
 
     const [plaseHolder] = useState(handlePlaseHolder(name));
     const [input, setInput] = useState('');
-    const [error, setError] = useState(null);
+    const [error, setError] = useState('');
 
     return (
         <>
@@ -25,7 +25,7 @@ function PersonalInput({ label, type, name }) {
                         error ? <p>{error}</p> : null
                     }
                 </div>
-                <input type={type} name={name} placeholder={plaseHolder} onChange={(e) => { handleChange(e) }} value={input} />
+                <input type={type} name={name} placeholder={plaseHolder} onChange={handleChange} value={input} />
             </div>
         </>
     )

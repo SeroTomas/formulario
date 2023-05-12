@@ -1,5 +1,23 @@
-import { createContext } from "react";
+'use client'
 
-const AppContext = createContext();
+import { createContext, useState } from "react";
 
-export default AppContext;
+export const AppContext = createContext();
+
+function ContextProvider({ children }) {
+
+    const [info, setInfo] = useState({
+        page: 1,
+        inputs: {},
+        errors: {}
+    })
+
+    return (
+        <AppContext.Provider value={{ info, setInfo }}>
+            {children}
+        </AppContext.Provider>
+    )
+
+}
+
+export default ContextProvider;

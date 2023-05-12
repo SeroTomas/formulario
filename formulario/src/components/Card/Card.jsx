@@ -1,9 +1,10 @@
 import PersonalInfo from "./PersonalInfo/PersonalInfo";
+import style from "./card.module.scss";
 
 function Card() {
     return (
         <>
-            <section>
+            <section className={style.card}>
               <PersonalInfo/>
             </section>
         </>

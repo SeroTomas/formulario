@@ -1,5 +1,7 @@
+//style
 import '../styles/globals.scss'
-
+//hooks, dependencias
+import ContextProvider from '@/components/AppContext';
 
 export const metadata = {
   title: 'Formulario',
@@ -9,7 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ContextProvider>
+          {children}
+        </ContextProvider>
+      </body>
     </html>
   )
 }

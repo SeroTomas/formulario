@@ -4,6 +4,8 @@ import style from "./personalInfo.module.scss";
 import PersonalInput from "./PersonalInput/PersonalInput"
 
 function PersonalInfo() {
+
+    
     return (
         <>
             <div className={style.personalContainer}>
