@@ -4,15 +4,16 @@ import styles from "./indicators.module.scss";
 //components and hooks
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
+
 function Indicators() {
 
     const pages = [1, 2, 3, 4];
-    const { page } = info;
+    const { info, setInfo } = useContext(AppContext);
 
     return (
         <>
             {
-                pages?.map(elemento => <button className={elemento === page ? styles.buttonSelected : styles.button} key={elemento}> {elemento} </button>)
+                pages?.map(elemento => <button className={elemento === info.page ? styles.buttonSelected : styles.button} key={elemento}> {elemento} </button>)
             }
         </>
     )

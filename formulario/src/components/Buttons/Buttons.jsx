@@ -29,11 +29,25 @@ function Buttons() {
 
     // anyError se encarga de verificar que no haya ningun error
     // en el form de PersonalInfo
-    const anyError = () => { if (!errors.name || !errors.email || !errors.phone) return false }
+    const anyError = () => {
+        if (errors.name || errors.email || errors.phone) {
+            return true;
+        } else return false;
+    }
 
     // anyInput se encarga de verificar que exista informacion
     // en cada input del form existente en PersonalInfo
-    const anyInput = () => { if (inputs.name || inputs.email || inputs.phone) return false }
+    const anyInput = () => {
+        if (inputs.name || inputs.email || inputs.phone) {
+            return false
+        } else return true
+    }
+    console.log(errors);
+    console.log(inputs);
+    console.log("error");
+    console.log(anyError());
+    console.log("input");
+    console.log(anyInput());
 
     return (
         <>

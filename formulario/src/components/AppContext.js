@@ -9,14 +9,14 @@ function ContextProvider({ children }) {
     const [info, setInfo] = useState({
         page: 1,
         inputs: {
-            name:'',
-            email:'',
-            phone:''
+            name:null,
+            email:null,
+            phone:null
         },
         errors: {
-            name:'',
-            email:'',
-            phone:''
+            name:true,
+            email:true,
+            phone:true
         }
     })
 
