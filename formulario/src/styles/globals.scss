@@ -18,10 +18,12 @@ body {
   background-image: url("../../public/bg-sidebar-mobile.svg");
   background-repeat: no-repeat;
   font-family: 'Ubuntu', sans-serif;
-  ;
 }
 
 .pText {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
   font-size: 1.6rem;
   color: $cool-gray;
 }
@@ -29,4 +31,27 @@ body {
 .h2Title {
   font-size: 2.4rem;
   color: $marine-blue;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  h2 {
+    font-size: 2.4rem;
+    color: $marine-blue;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+
+
+    p {
+      font-size: 1.6rem;
+      color: $cool-gray;
+    }
+  }
 }
