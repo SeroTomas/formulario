@@ -20,6 +20,7 @@ function ContextProvider({ children }) {
         },
         plan:{
             type:'monthly',
+            selection: '',
             price:''
         }
     })

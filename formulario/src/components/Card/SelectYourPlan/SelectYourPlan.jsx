@@ -11,8 +11,6 @@ import { AppContext } from '@/components/AppContext';
 
 function SelectYourPlan() {
     
-    const {info, setInfo} = useContext(AppContext);
-
     const prices = {
         monthly: {
             arcade: 9,
@@ -25,16 +23,44 @@ function SelectYourPlan() {
             pro: 150
         }
     };
-
+    
+    const {info, setInfo} = useContext(AppContext);
     const [plan, setPlan] = useState(prices.monthly);
     const [checked, setChecked] = useState(false);
+    console.log(info.plan);
 
     const handleToggle = (e) => {
         const value = e.target.checked
         setChecked(value)
-        value ? setPlan(prices.yearly) : setPlan(prices.monthly)
-        
+        handlePlanAndContext(value)
     };
+
+    const handlePlanAndContext = (value) => {
+        //esta funcion se encarga de modificar el estado plan
+        //como tambien guardar la informacion en el estado global context
+        const onYearly = () => {
+            setPlan(prices.yearly);
+            setInfo({
+                ...info,
+                plan:{
+                    ...info.plan,
+                    type:'Yearly'
+                }
+            })
+        }
+        const onMonthly = () => {
+            setPlan(prices.monthly);
+            setInfo({
+                ...info,
+                plan:{
+                    ...info.plan,
+                    type:'Monthly'
+                }
+            })
+        }
+
+        value ? onYearly() : onMonthly();
+    }
 
     return (
         <>
