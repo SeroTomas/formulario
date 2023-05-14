@@ -17,6 +17,10 @@ function ContextProvider({ children }) {
             name:true,
             email:true,
             phone:true
+        },
+        plan:{
+            type:'monthly',
+            price:''
         }
     })
 

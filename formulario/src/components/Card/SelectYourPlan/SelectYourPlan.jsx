@@ -1,17 +1,18 @@
 //styles
 import style from './selectYourPlan.module.scss';
 //components and hooks
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import PlanSelector from './PlanSelector/PlanSelector'
 import Switch from '@mui/material/Switch';
 import arcadeIcon from '../../../../public/icon-arcade.svg';
 import advancedIcon from '../../../../public/icon-advanced.svg';
 import proIcon from '../../../../public/icon-pro.svg';
+import { AppContext } from '@/components/AppContext';
 
 function SelectYourPlan() {
+    
+    const {info, setInfo} = useContext(AppContext);
 
-    const [plan, setPlan] = useState(null);
-    const [toggle, setToggle] = useState(true);
     const prices = {
         monthly: {
             arcade: 9,
@@ -25,15 +26,14 @@ function SelectYourPlan() {
         }
     };
 
-    const label = { inputProps: { 'aria-label': 'Switch demo' } };
-
-    const handleChange = () => {
-        toggle ? setPlan(prices.monthly) : setPlan(prices.yearly);
-    };
+    const [plan, setPlan] = useState(prices.monthly);
+    const [checked, setChecked] = useState(false);
 
     const handleToggle = (e) => {
-        const value = e.target.value;
-        console.log(value)
+        const value = e.target.checked
+        setChecked(value)
+        value ? setPlan(prices.yearly) : setPlan(prices.monthly)
+        
     };
 
     return (
@@ -46,13 +46,15 @@ function SelectYourPlan() {
                 </div>
             </div>
             <div>
-                <PlanSelector icon={arcadeIcon} title={"Arcade"}/>
-                <PlanSelector icon={advancedIcon} title={"Advanced"}/>
-                <PlanSelector icon={proIcon} title={"Pro"}/>
+                <PlanSelector icon={arcadeIcon} title={"Arcade"} price={plan.arcade} />
+                <PlanSelector icon={advancedIcon} title={"Advanced"} price={plan.advanced} />
+                <PlanSelector icon={proIcon} title={"Pro"} price={plan.pro} />
             </div>
             <div>
                 <p>Monthly</p>
-                <Switch onChange={handleToggle}/>
+                <Switch
+                    checked={checked}
+                    onChange={handleToggle} />
                 <p>Yeraly</p>
             </div>
         </>
