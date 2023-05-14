@@ -27,7 +27,7 @@ function SelectYourPlan() {
     const {info, setInfo} = useContext(AppContext);
     const [plan, setPlan] = useState(prices.monthly);
     const [checked, setChecked] = useState(false);
-    console.log(info.plan);
+    const selected = useState('');
 
     const handleToggle = (e) => {
         const value = e.target.checked
@@ -58,7 +58,6 @@ function SelectYourPlan() {
                 }
             })
         }
-
         value ? onYearly() : onMonthly();
     }
 
@@ -72,9 +71,9 @@ function SelectYourPlan() {
                 </div>
             </div>
             <div>
-                <PlanSelector icon={arcadeIcon} title={"Arcade"} price={plan.arcade} />
-                <PlanSelector icon={advancedIcon} title={"Advanced"} price={plan.advanced} />
-                <PlanSelector icon={proIcon} title={"Pro"} price={plan.pro} />
+                <PlanSelector icon={arcadeIcon} title={"Arcade"} price={plan.arcade} selected = {selected}/>
+                <PlanSelector icon={advancedIcon} title={"Advanced"} price={plan.advanced} selected={selected}/>
+                <PlanSelector icon={proIcon} title={"Pro"} price={plan.pro} selected={selected}/>
             </div>
             <div>
                 <p>Monthly</p>
