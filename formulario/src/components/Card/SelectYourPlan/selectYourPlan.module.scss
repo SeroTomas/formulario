@@ -1,0 +1,14 @@
+@import "../../../styles/var.module";
+
+.buttonsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.switchContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}

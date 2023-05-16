@@ -1,6 +1,7 @@
-import Image from 'next/image'
-import React, { useContext, useState } from 'react'
-import { AppContext } from '@/components/AppContext'
+import style from "./planSelector.module.scss";
+import Image from 'next/image';
+import React, { useContext } from 'react';
+import { AppContext } from '@/components/AppContext';
 
 function PlanSelector({ icon, title, price, selected }) {
 
@@ -17,17 +18,17 @@ function PlanSelector({ icon, title, price, selected }) {
         price: price
       }
     })
-  }
+  };
 
   return (
-    <button onClick={handlePrice}>
+    <button className={select === title ? style.selected :style.selectButton} onClick={handlePrice}>
       <Image src={icon} />
-      <div>
+      <div className={style.textContainer}>
         <h3>{title}</h3>
-        <p>{price}</p>
+        <p>${price}/{info.plan.type === "monthly" ? "mo" : "yr"}</p>
       </div>
     </button>
   )
-}
+};
 
 export default PlanSelector

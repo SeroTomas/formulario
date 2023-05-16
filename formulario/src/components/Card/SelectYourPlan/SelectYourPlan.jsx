@@ -44,7 +44,7 @@ function SelectYourPlan() {
                 ...info,
                 plan:{
                     ...info.plan,
-                    type:'Yearly'
+                    type:'yearly'
                 }
             })
         }
@@ -54,7 +54,7 @@ function SelectYourPlan() {
                 ...info,
                 plan:{
                     ...info.plan,
-                    type:'Monthly'
+                    type:'monthly'
                 }
             })
         }
@@ -70,12 +70,12 @@ function SelectYourPlan() {
                     <p>yearly billing</p>
                 </div>
             </div>
-            <div>
+            <div className={style.buttonsContainer}>
                 <PlanSelector icon={arcadeIcon} title={"Arcade"} price={plan.arcade} selected = {selected}/>
                 <PlanSelector icon={advancedIcon} title={"Advanced"} price={plan.advanced} selected={selected}/>
                 <PlanSelector icon={proIcon} title={"Pro"} price={plan.pro} selected={selected}/>
             </div>
-            <div>
+            <div className={style.switchContainer}>
                 <p>Monthly</p>
                 <Switch
                     checked={checked}

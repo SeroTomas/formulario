@@ -1,0 +1,64 @@
+@import "../../../../styles/var.module.scss";
+
+.selectButton{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 10px 15px 10px;
+
+    background-color: transparent;
+    border: 1px solid $light-gray;
+    border-radius: 10px;
+
+    &:hover{
+        border: 1px solid $purplish-blue;
+        cursor: pointer;
+    }
+
+    .textContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+
+        h3{
+            color: $marine-blue;
+        }
+
+        p{
+            color: $cool-gray;
+        }
+        
+    }
+}
+
+.selected{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 10px 15px 10px;
+    border: 1px solid $purplish-blue;
+    border-radius: 10px;
+    background-color: $magnolia;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    .textContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+
+        h3{
+            color: $marine-blue;
+        }
+
+        p{
+            color: $cool-gray;
+        }
+        
+    }
+}
+
