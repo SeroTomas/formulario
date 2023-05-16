@@ -76,11 +76,11 @@ function SelectYourPlan() {
                 <PlanSelector icon={proIcon} title={"Pro"} price={plan.pro} selected={selected}/>
             </div>
             <div className={style.switchContainer}>
-                <p>Monthly</p>
+                <p className={info.plan.type === "monthly" ? style.selected : null}>Monthly</p>
                 <Switch
                     checked={checked}
                     onChange={handleToggle} />
-                <p>Yeraly</p>
+                <p className={info.plan.type === "yearly" ? style.selected : null}>Yearly</p>
             </div>
         </>
     )

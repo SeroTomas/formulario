@@ -3,12 +3,27 @@
 .buttonsContainer{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .switchContainer{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 1.5rem;
+    padding: 5px 0 5px 0;
+    border-radius: 10px;
+    background-color: $magnolia;
+
+    p{
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $cool-gray;
+    }
+
+    .selected{
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $marine-blue;
+    }
 }

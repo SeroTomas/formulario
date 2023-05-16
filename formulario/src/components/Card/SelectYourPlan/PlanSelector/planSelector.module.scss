@@ -1,64 +1,81 @@
 @import "../../../../styles/var.module.scss";
 
-.selectButton{
+.selectButton {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 15px 10px 15px 10px;
-
+    gap: 1rem;
+    height: 8rem;
+    padding-left: 2rem;
     background-color: transparent;
     border: 1px solid $light-gray;
     border-radius: 10px;
 
-    &:hover{
+    &:hover {
         border: 1px solid $purplish-blue;
         cursor: pointer;
     }
 
-    .textContainer{
+    .textContainer {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 0.5rem;
         align-items: flex-start;
 
-        h3{
+        h3 {
             color: $marine-blue;
         }
 
-        p{
+        p {
             color: $cool-gray;
         }
-        
+
+
+    }
+
+    .popUpText {
+        text-align: right;
+        flex-grow: 1;
+        font-size: 1.3rem;
+        padding-right: 2rem;
+        color: $marine-blue;
     }
 }
 
-.selected{
+.selected {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 15px 10px 15px 10px;
+    gap: 1rem;
+    height: 8rem;
+    padding-left: 2rem;
     border: 1px solid $purplish-blue;
     border-radius: 10px;
     background-color: $magnolia;
 
-    &:hover{
+    &:hover {
         cursor: pointer;
     }
 
-    .textContainer{
+    .textContainer {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 0.5rem;
         align-items: flex-start;
 
-        h3{
+        h3 {
             color: $marine-blue;
         }
 
-        p{
+        p {
             color: $cool-gray;
         }
-        
+
+    }
+
+    .popUpText {
+        text-align: right;
+        flex-grow: 1;
+        font-size: 1.3rem;
+        padding-right: 2rem;
+        color: $marine-blue;
     }
 }
-
