@@ -22,7 +22,8 @@ function ContextProvider({ children }) {
             type:'monthly',
             selection: '',
             price:''
-        }
+        },
+        addOns:{}
     })
 
     return (
