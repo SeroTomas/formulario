@@ -1,6 +1,8 @@
-import React, { useContext } from 'react'
-import CheckBox from './CheckBox/CheckBox'
-import { AppContext } from '@/components/AppContext'
+//style
+import style from './addOns.module.scss';
+import React, { useContext } from 'react';
+import CheckBox from './CheckBox/CheckBox';
+import { AppContext } from '@/components/AppContext';
 
 function AddOns() {
 
@@ -41,7 +43,7 @@ function AddOns() {
                     <p>experience.</p>
                 </div>
             </div>
-            <div>
+            <div className={style.checkContainer}>
                 <CheckBox title={ONLINE_SERVICE.title} text={ONLINE_SERVICE.text} price={type[planType][ONLINE_SERVICE.title]} />
                 <CheckBox title={LARGER_STORAGE.title} text={LARGER_STORAGE.text} price={type[planType][LARGER_STORAGE.title]} />
                 <CheckBox title={CUSTOM_PROFILE.title} text={CUSTOM_PROFILE.text} price={type[planType][CUSTOM_PROFILE.title]} />

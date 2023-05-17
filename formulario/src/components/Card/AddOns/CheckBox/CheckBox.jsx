@@ -1,3 +1,5 @@
+//style
+import style from "./checkbox.module.scss";
 import React, { useContext, useState } from 'react';
 import { AppContext } from '@/components/AppContext';
 import Checkbox from '@mui/material/Checkbox';
@@ -30,10 +32,11 @@ function CheckBox({ title, text, price }) {
 
 
     return (
-        <button onClick={handleClick}>
+        <button onClick={handleClick} className={style.checkButton}>
             <Checkbox
                 checked={checked}
                 color="primary"
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 25} }}
             />
             <div>
                 <h3>{title}</h3>
