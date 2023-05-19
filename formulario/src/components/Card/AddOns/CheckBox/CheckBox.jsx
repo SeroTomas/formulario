@@ -32,18 +32,14 @@ function CheckBox({ title, text, price }) {
 
 
     return (
-        <button onClick={handleClick} className={style.checkButton}>
-            <Checkbox
-                checked={checked}
-                color="primary"
-                sx={{ '& .MuiSvgIcon-root': { fontSize: 25} }}
-            />
-            <div>
+        <button onClick={handleClick} className={checked ? style.checkedButton :style.checkButton}>
+            <input type="checkbox" checked={checked}/>
+            <div className={style.info}>
                 <h3>{title}</h3>
                 <p>{text}</p>
             </div>
-            <div>
-                <p>${price}/{info.plan.type === "monthly" ? "mo" : "yr"}</p>
+            <div className={style.priceText}>
+                <p>+${price}/{info.plan.type === "monthly" ? "mo" : "yr"}</p>
             </div>
 
         </button>

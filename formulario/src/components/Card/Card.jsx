@@ -6,6 +6,7 @@ import SelectYourPlan from "./SelectYourPlan/SelectYourPlan";
 import AddOns from "./AddOns/AddOns";
 import {AppContext} from "../AppContext";
 import { useContext } from "react";
+import FinishingUp from "./FinishigUp/FinishingUp";
 
 function Card() {
 
@@ -14,14 +15,13 @@ function Card() {
     const sections = {
         1: <PersonalInfo/>,
         2: <SelectYourPlan/>,
-        3: <AddOns/>
+        3: <AddOns/>,
+        4: <FinishingUp/>
     }
     return (
         <>
             <section className={style.card}>
-                {
-                    sections[info.page]
-                }
+                {sections[info.page]}
             </section>
         </>
     )
