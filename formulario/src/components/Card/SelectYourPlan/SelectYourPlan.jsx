@@ -25,6 +25,7 @@ function SelectYourPlan() {
     };
     
     const {info, setInfo} = useContext(AppContext);
+
     const [plan, setPlan] = useState(prices.monthly);
     const [checked, setChecked] = useState(false);
     const selected = useState('');

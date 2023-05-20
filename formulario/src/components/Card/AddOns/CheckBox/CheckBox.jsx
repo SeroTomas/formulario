@@ -7,7 +7,11 @@ import Checkbox from '@mui/material/Checkbox';
 function CheckBox({ title, text, price }) {
 
     const { info, setInfo } = useContext(AppContext);
-    const [checked, setChecked] = useState(false)
+    
+    //verificamos si existe el addOn en el context global
+    const check = () => info.addOns.find(element => element.title === title) ? true : false;
+
+    const [checked, setChecked] = useState(check())
 
     const handleClick = () => {
         const isChecked = !checked
