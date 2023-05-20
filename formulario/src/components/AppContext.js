@@ -23,7 +23,7 @@ function ContextProvider({ children }) {
             selection: '',
             price:''
         },
-        addOns:{}
+        addOns:[]
     })
 
     return (

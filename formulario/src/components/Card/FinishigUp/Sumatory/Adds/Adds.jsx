@@ -1,8 +1,11 @@
 import React from 'react'
 
-function Adds() {
+function Adds({title, price, planType}) {
   return (
-    <div>Adds</div>
+    <div>
+      <p>{title}</p>
+      <p>{`$${price}/${planType === "monthly" ? "mo" : "yr"}`}</p>
+    </div>
   )
 }
 

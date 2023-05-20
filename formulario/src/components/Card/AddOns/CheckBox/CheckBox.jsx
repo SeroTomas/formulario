@@ -15,17 +15,13 @@ function CheckBox({ title, text, price }) {
         if (isChecked) {
             setInfo({
                 ...info,
-                addOns: {
-                    ...info.addOns,
-                    [title]: price
-                }
+                addOns: [...info.addOns, {title:title, price:price}]
             });
         } else {
-            let newAddOns = { ...info.addOns };
-            delete newAddOns[title];
+            const newArray = info.addOns.filter(element => element.title !== title)
             setInfo({
                 ...info,
-                addOns: newAddOns
+                addOns: newArray
             });
         }
     };

@@ -14,8 +14,8 @@ function FinishingUp() {
                     <p>before confirming.</p>
                 </div>
             </div>
-            <Sumatory />
             <Resume />
+            <Sumatory />
         </>
     )
 }
